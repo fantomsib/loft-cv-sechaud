@@ -1,3 +1,4 @@
 Станислав Sechaud 
-Ветки git :
-Week1,
+
+git clone  https://github.com/fantomsib/loft-cv-sechaud.git
+
