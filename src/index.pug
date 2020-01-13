@@ -11,9 +11,50 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        .container
-          header.header
-          header.header-logo SS
+        .wrapper-section
+          .parallax
+            +image('content/welcome-section-bag.png', 'parallax-image')
+          section.section.welcome
+            .container.container-welcome
+              header.header
+                .header-logo SS
+                nav.nav
+                  ul.nav-list
+                    li.nav-item 
+                      a.nav-link Главная
+                    li.nav-item
+                      a.nav-link Обо мне
+                    li.nav-item 
+                      a.nav-link Навыки
+                    li.nav-item
+                      a.nav-link Работы
+                    li.nav-item 
+                      a.nav-link Отзывы
+                    li.nav-item
+                      a.nav-link Связаться
+                ul.social-header
+                  li.social-header__item
+                    .icon-insta
+                  li.social-header__item
+                    .icon-vk  
+                  li.social-header__item
+                    .icon-github
+              .name-title
+                h1.title-website Личный сайт <br> веб разработчика 
+                .name-developer Stanislav <br> Sechaud
+              .scroll
+                a.scroll-link
+                  .scroll-text Скролл
+                  .scroll-icon
+          section.section.about
+            .container.contaner-about
+              .about-left
+                .devoloper-photo
+                  +image('content/tip.png', 'dev-icon')
+                ul.developer-info
+                  li.de
+
+
 
 
 
