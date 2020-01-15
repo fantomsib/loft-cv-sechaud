@@ -4,5 +4,131 @@
 }
 
 .contaner-about {
-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+}
+
+//about-left
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.devoloper-photo {
+  margin-bottom: 58px;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+.dev-icon {
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.info__item {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.info__data {
+  display: flex;
+  opacity: 0.3;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  flex-basis: 40%;
+}
+
+.info__value {
+  display: flex;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: left;
+  flex-basis: 60%;
+}
+
+////About-right 
+.about-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 54%;
+}
+
+.about-hi {
+  opacity: 0.5;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.about-name {
+  color: #464d62;
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 38px;
+}
+
+.about-work {
+  opacity: 0.5;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 105px;
+}
+
+.about-loft {
+  opacity: 0.5;
+  color: #464d62;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 30px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+
+  &::before {
+    content: '*';
+    display: flex;
+    position: absolute;
+    color: #db0200;
+    opacity: 0.1;
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-style: italic;
+    line-height: 30px;
+    left: -55px;
+    top: 7px;
+  }
 }

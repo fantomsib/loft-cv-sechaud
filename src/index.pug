@@ -14,7 +14,7 @@ html(lang="ru")
         .wrapper-section
           .parallax
             +image('content/welcome-section-bag.png', 'parallax-image')
-          section.section.welcome
+          section.section.welcome.fullscreen-section
             .container.container-welcome
               header.header
                 .header-logo SS
@@ -41,7 +41,7 @@ html(lang="ru")
                     .icon-github
               .name-title
                 h1.title-website Личный сайт <br> веб разработчика 
-                .name-developer Stanislav <br> Sechaud
+                .name-developer Stanislav<br>Sechaud
               .scroll
                 a.scroll-link
                   .scroll-text Скролл
@@ -50,15 +50,46 @@ html(lang="ru")
             .container.contaner-about
               .about-left
                 .devoloper-photo
-                  +image('content/tip.png', 'dev-icon')
-                ul.developer-info
-                  li.de
-
-
-
-
-
-
-
+                  +image('content/slice-1.png', 'dev-icon')
+                ul.info-list
+                  li.info__item
+                    .info__data Проживаю:
+                    .info__value Марсель
+                  li.info__item
+                    .info__data Возраст:
+                    .info__value 33 года
+                  li.info__item
+                    .info__data Родился:
+                    .info__value 20 сентября 1986    
+              .about-right
+                h2.about-hi Привет меня зовут
+                .about-name Stanislav Sechaud
+                .about-work Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.   
+                .about-loft Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
+        section.section.skills
+          .container.container-skills
+            .skill-text
+              h3.skills-title Чем я могу быть полезен вам
+              .skills-about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .skills-backpack
+                +image('content/skills-backpack.png', 'skills-icon')
+            .skills-content
+              .skills-block
+                .skills-title Front-end
+                ul.skills-list
+                  each i in ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js',]
+                    li.skills__item= i 
+              .skills-block
+                .skills-title Workflow
+                ul.skills-list
+                  each i in ['GIT', 'Terminal', 'Gulp', 'Webpack',]
+                    li.skills__item= i 
+        section.section.my-work
+          .container.contaner-myWork
+            h4.my-work__title Мои Работы
+            .work-content
+              ul.slider-work
+        section.section.about-me
+              h4.my-work__title Мои Работы
 
 
