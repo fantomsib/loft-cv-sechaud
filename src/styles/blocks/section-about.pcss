@@ -1,12 +1,24 @@
 .about {
   z-index: 10;
   display: flex;
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 
 .contaner-about {
-  align-items: center;
-  justify-content: space-between;
-  width: 55%;
+  justify-content: space-around;
+  display: flex;
+  @include desktop {
+    //justify-content: space-around;
+  }
+  @include tablets {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 //about-left
@@ -14,15 +26,38 @@
 .about-left {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
+  height: 100%;
+  @include desktop {
+    width: 40%;
+  }
+  @include tablets {
+    width: 50%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .devoloper-photo {
-  margin-bottom: 58px;
+  margin-bottom: 48px;
   display: flex;
   width: 200px;
   height: 200px;
   align-self: center;
+  @include tablets {
+    width: 172px;
+    height: 172px;
+  }
 }
 
 .dev-icon {
@@ -31,10 +66,64 @@
   object-fit: cover;
 }
 
+.developer-text {
+  display: flex;
+  width: 100%;
+}
+
+.developer-data__table {
+  width: 100%;
+  display: flex;
+  
+}
+
+tbody {
+  width: 100%;
+  display: flex;
+
+  //display: flex;
+  flex-direction: column
+}
+
+.developer-data__row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+.developer-values:first-child {
+  opacity: 0.3;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 50%;
+}
+
+.developer-values:last-child {
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 50%;
+}
+
+
+
+/*
 .info-list {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  @include phones {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .info__item {
@@ -47,6 +136,14 @@
   &:last-child {
     margin-bottom: 0px;
   }
+  @include tablets {
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  @include phones {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .info__data {
@@ -58,6 +155,13 @@
   font-weight: 400;
   line-height: 30px;
   flex-basis: 40%;
+  @include tablets {
+    font-size: 14px;
+    flex-basis: 40%;
+  }
+  @include phones {
+    flex-basis: 40%;
+  }
 }
 
 .info__value {
@@ -69,23 +173,43 @@
   line-height: 30px;
   text-align: left;
   flex-basis: 60%;
-}
+  @include tablets {
+    font-size: 14px;
+    flex-basis: 40%;
+  }
+  @include phones {
+    flex-basis: 45%;
+  }
+}*/
 
 ////About-right 
 .about-right {
   display: flex;
   flex-direction: column;
-  flex-basis: 54%;
+  width: 35%;
+  @include desktop {
+    width: 45%;
+  }
+  @include phones {
+    width: 100%;
+    align-items: center;
+  }
 }
 
-.about-hi {
+.about-title {
   opacity: 0.5;
   color: #464d62;
   font-family: "Open Sans - Semibold";
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    margin-bottom: 4px;
+  }
 }
 
 .about-name {
@@ -94,7 +218,13 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
-  margin-bottom: 38px;
+  margin-bottom: 15px;
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
+    margin-bottom: 7px;
+  }
 }
 
 .about-work {
@@ -104,7 +234,14 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 105px;
+  margin-bottom: 75px;
+  @include tablets {
+    font-size: 14px;
+    margin-bottom: 53px;
+  }
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 
 .about-loft {
@@ -117,6 +254,9 @@
   display: flex;
   position: relative;
   align-items: flex-start;
+  @include tablets {
+    font-size: 14px;
+  }
 
   &::before {
     content: '*';

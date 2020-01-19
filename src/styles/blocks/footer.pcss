@@ -1,0 +1,271 @@
+.footer {
+  display: flex;
+  background-color: #252830;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex-shrink: 0;
+  position: relative;
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include tablets {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.container-footer {
+  justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer-left {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  @include desktop {
+    flex-direction: column;
+  }
+  @include tablets {
+    justify-content: initial;
+    width: 35%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.copyright {
+  opacity: 0.1;
+  color: #ffffff;
+  font-family: "Open Sans - Semibold";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 30px;
+  @include tablets {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+}
+
+.footer-name {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.name-dev {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 37px;
+  @include desktop {
+    margin-bottom: 16px;
+  }
+  @include phones {
+  }
+}
+
+.website-dev {
+  opacity: 0.15;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  @include tablets {
+    font-size: 14px;
+  }
+}
+
+//FOOTER-RIGHT
+.footer-right {
+  width: 63.5%;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    width: 85%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  width: 74%;
+  margin-bottom: 67px;
+  @include desktop {
+    width: 91%;
+  }
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include tablets {
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.footer-menu__items {
+  display: flex;
+
+  &:hover {
+    opacity: 0.55;
+  }
+  @include tablets {
+    flex-basis: 25%;
+    margin-bottom: 10px;
+  }
+  @include phones {
+    flex-basis: 33%;
+  }
+}
+
+.footer-menu__link {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.footer-content {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.footer-content__left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.website-working {
+  opacity: 0.3;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 70%;
+  margin-bottom: 27px;
+  @include tablets {
+    font-size: 14px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+.social-footer {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include desktop {
+    width: 65%;
+  }
+  @include tablets {
+    width: 42%;
+    margin-bottom: 25px;
+  }
+  @include phones {
+    width: 60%;
+  }
+}
+
+.socila-footer__item {
+  display: flex;
+}
+
+.social-link__footer {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #66686e;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover .socials-icon__footer {
+    fill: #ffffff;
+  }
+
+  &:hover {
+    border: 1px solid #ffffff;
+  }
+}
+
+.socials-icon__footer {
+  width: 25px;
+  height: 25px;
+  fill: #66686e;
+}
+
+.footer-content__right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.quote {
+  opacity: 0.3;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 35px;
+  @include tablets {
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.quote-name {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 30px;
+
+  &:hover {
+    opacity: 0.55;
+  }
+  @include tablets {
+    font-size: 14px;
+  }
+}
+
+.quote-avtor {
+  text-decoration: none;
+}

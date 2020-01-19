@@ -1,6 +1,6 @@
-.skills{
- padding-top: 140px;
- padding-bottom: 170px;
+.skills {
+  padding-top: 140px;
+  padding-bottom: 170px;
 }
 
 .container-skills {
@@ -16,6 +16,11 @@
   flex-direction: column;
   margin-bottom: 70px;
   width: 40%;
+  z-index: 5;
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .skills-title {
@@ -26,6 +31,13 @@
   line-height: 36px;
   display: flex;
   margin-bottom: 40px;
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include phones {
+    text-align: center;
+  }
 }
 
 .skills-about {
@@ -36,6 +48,14 @@
   font-weight: 400;
   line-height: 30px;
   display: flex;
+  @include tablets {
+    width: 55%;
+    text-align: center;
+  }
+  @include phones {
+    width: 75%;
+    text-align: left;
+  }
 }
 
 .skills-content {
@@ -45,7 +65,11 @@
   width: 64%;
   align-self: flex-end;
   @include desktop {
-    width: 65%;
+    width: 67%;
+  }
+  @include tablets {
+    width: 100%;
+    align-items: center;
   }
 }
 
@@ -54,28 +78,47 @@
   flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 
-.skills__item {
+.skill-circle {
   display: flex;
-  width: 134px;
-  height: 134px;
-  border-radius: 50%;
-  border: 10px solid #393939;
+  width: 150px;
+  height: 150px;
+  
+}
+
+.skills__item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-name {
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #464d62;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   opacity: 0.5;
-  //margin-bottom: 50px;
+  position: absolute;
 
   &:last-child {
     margin-bottom: 0;
     margin-right: 0;
+  }
+  @include tablets {
+  }
+  @include phones {
   }
 }
 
@@ -83,8 +126,14 @@
   position: absolute;
   left: -135px;
   top: 90px;
+  z-index: 0;
   @include desktop {
-    left: -240px;
+    left: -270px;
+  }
+  @include tablets {
+    position: static;
+    width: 316px;
+    height: 281px;
   }
 }
 
@@ -93,7 +142,16 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 50px;
+  z-index: 5;
+  @include tablets {
+    width: 90%;
+  }
+  @include phones {
+    align-items: center;
+  }
 }
+
+
 
 
 

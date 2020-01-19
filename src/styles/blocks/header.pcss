@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 187px;
+
 }
 
 .header-logo {
@@ -16,10 +16,19 @@
   line-height: 30px;
 }
 
-.nav {
+.header-menu {
   display: flex;
   flex-basis: 50%;
+  @include desktop {
+    flex-basis: 65%;
+  }
+  @include tablets {
+    display: none;
+  }
+}
 
+.nav {
+  width: 100%;
 }
 
 .nav-list {
@@ -30,52 +39,71 @@
   flex-wrap: wrap;
 }
 
+.nav-item {
+  display: flex;
+}
+
 .nav-link {
   color: #464d62;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
 }
 
-.social-header {
+.link {
   display: flex;
   width: 9%;
+  position: relative;
+  @include desktop {
+    width: 15%;
+  }
+  @include tablets {
+  
+  }
+}
+
+.social {
+  display: flex;
+  flex-basis: 100%;
   justify-content: space-between;
   cursor: pointer;
-}
-
-.social-header__item {
-  width: 25px;
-  height: 25px;
- }
-
-.icon-insta{
-  width: 25px;
-  height: 25px;
-  background: svg-load('insta.svg', fill=#414c63, width=100%, height=100%);
-  &:hover{
-    background: svg-load('insta.svg', fill=black, width=100%, height=100%);
+  flex-wrap: wrap;
+  @include tablets {
+    
   }
 }
 
-.icon-vk{
+.socials__icon {
   width: 25px;
   height: 25px;
-  background: svg-load('vk.svg', fill=#414c63, width=100%, height=100%);
-  &:hover{
-    background: svg-load('vk.svg', fill=black, width=100%, height=100%);
+
+  &:hover {
+    opacity: 0.55;
   }
 }
 
-.icon-github{
-  width: 25px;
-  height: 25px;
-  background: svg-load('github.svg', fill=#414c63, width=100%, height=100%);
-  &:hover{
-    background: svg-load('github.svg', fill=black, width=100%, height=100%);
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+
+  display: none;
+  @include tablets {
+    display: flex;
+    position: absolute;
+    right: 0;
+    
   }
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 4px;
+  background-color: black;
+  margin: 2px 0;
 }

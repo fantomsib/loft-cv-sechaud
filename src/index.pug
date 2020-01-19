@@ -17,79 +17,265 @@ html(lang="ru")
           section.section.welcome.fullscreen-section
             .container.container-welcome
               header.header
-                .header-logo SS
-                nav.nav
-                  ul.nav-list
-                    li.nav-item 
-                      a.nav-link Главная
-                    li.nav-item
-                      a.nav-link Обо мне
-                    li.nav-item 
-                      a.nav-link Навыки
-                    li.nav-item
-                      a.nav-link Работы
-                    li.nav-item 
-                      a.nav-link Отзывы
-                    li.nav-item
-                      a.nav-link Связаться
-                ul.social-header
-                  li.social-header__item
-                    .icon-insta
-                  li.social-header__item
-                    .icon-vk  
-                  li.social-header__item
-                    .icon-github
-              .name-title
-                h1.title-website Личный сайт <br> веб разработчика 
-                .name-developer Stanislav<br>Sechaud
-              .scroll
-                a.scroll-link
-                  .scroll-text Скролл
-                  .scroll-icon
+                .header-logo
+                  .logo SS
+                .header-menu
+                  - let menu = ['Главная', 'Обо мне', 'Навыки', 'Работа', 'Отзывы', 'Связаться', ];
+                  nav.nav
+                    ul.nav-list
+                      each items in menu
+                        li.nav-item
+                          a(href="").nav-link #{items}   
+                .link
+                  -let icons = ['insta', 'vk', 'github'];
+                  ul.social
+                    each item in icons
+                      li.socila__item
+                        a(href="").social__link
+                          +icon(item, 'socials__icon')
+                .hamburger
+                  .hamburger-icon
+                  .hamburger-icon
+                  .hamburger-icon         
+              .welcome-content
+                .name-title
+                  .title-website Личный сайт <br> веб разработчика 
+                  .name-developer Stanislav<br>Sechaud
+              .control-welcome
+                .scroll
+                  a.scroll-link
+                    .scroll-text Скролл
+                    +icon('scroll', 'scroll-icon')
           section.section.about
             .container.contaner-about
               .about-left
-                .devoloper-photo
-                  +image('content/slice-1.png', 'dev-icon')
-                ul.info-list
-                  li.info__item
-                    .info__data Проживаю:
-                    .info__value Марсель
-                  li.info__item
-                    .info__data Возраст:
-                    .info__value 33 года
-                  li.info__item
-                    .info__data Родился:
-                    .info__value 20 сентября 1986    
+                .developer
+                  .devoloper-photo
+                    +image('content/slice-1.png', 'dev-icon')
+                  .developer-text
+                    -
+                      let rows = [
+                        ["Проживаю:", "Марсель"],
+                        ['Возраст:', '33 года'],
+                        ['Родился:', '20 сентября 1986']
+                      ];
+                    table.developer-data
+                      table.developer-data__table
+                        each row in rows
+                          tr.developer-data__row
+                            each cell in row
+                              td.developer-values #{cell}       
               .about-right
-                h2.about-hi Привет меня зовут
-                .about-name Stanislav Sechaud
-                .about-work Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.   
-                .about-loft Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
+                .about-content
+                  h2.about-title Привет меня зовут
+                  .about-name Stanislav Sechaud
+                  .about-work Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.    
+                  .about-loft Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
+        .triangles
+          svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,100")
+          svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,100 1000,100 1000,0")
+
+
+
         section.section.skills
           .container.container-skills
             .skill-text
               h3.skills-title Чем я могу быть полезен вам
               .skills-about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .skills-backpack
-                +image('content/skills-backpack.png', 'skills-icon')
+            
             .skills-content
               .skills-block
                 .skills-title Front-end
                 ul.skills-list
-                  each i in ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js',]
-                    li.skills__item= i 
+                  each i in ['HTML5', 'CSS3', 'Javascript', 'Jquery\n и Vue.js',]
+                    li.skills__item
+                      svg(width="100%" height="100%" viewBox="0 0 42 42" class="skill-circle")
+                              linearGradient#circleGradient(x1="0%" y1="0%" x2="0%" y2="100%")
+                                stop(offset="0%" stop-color="#5500F2")
+                                stop(offset="100%" stop-color="#4B6FD7")
+                              circle(class="skill-circle-hole" cx="21" cy="21" r="15.91549430918954" fill="none")
+                              circle(class="skill-circle-ring" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="#D2D3D4" stroke-width="2")
+                              circle(class="skill-circle-segment" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="url(#circleGradient)" stroke-dasharray=`80 20` stroke-dashoffset="50" stroke-width="4")              
+                      .skill-name=i
               .skills-block
                 .skills-title Workflow
                 ul.skills-list
                   each i in ['GIT', 'Terminal', 'Gulp', 'Webpack',]
-                    li.skills__item= i 
-        section.section.my-work
-          .container.contaner-myWork
-            h4.my-work__title Мои Работы
+                    li.skills__item
+                      svg(width="100%" height="100%" viewBox="0 0 42 42" class="skill-circle")
+                              linearGradient#circleGradient(x1="0%" y1="0%" x2="0%" y2="100%")
+                                stop(offset="0%" stop-color="#5500F2")
+                                stop(offset="100%" stop-color="#4B6FD7")
+                              circle(class="skill-circle-hole" cx="21" cy="21" r="15.91549430918954" fill="none")
+                              circle(class="skill-circle-ring" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="#D2D3D4" stroke-width="2")
+                              circle(class="skill-circle-segment" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="url(#circleGradient)" stroke-dasharray=`80 20` stroke-dashoffset="50" stroke-width="4")              
+                      .skill-name=i
+                      
+                            
+                      
+                            
+    
+                                    
+            .skills-backpack
+              +image('content/skills-backpack.png', 'skills-icon')        
+        section.section.work
+          .container.container-work
+            .work-row
+              h4.work-title Мои работы
             .work-content
-              ul.slider-work
-        section.section.about-me
-              h4.my-work__title Мои Работы
+              .work-left
+                .slider 
+                  .slider-display
+
+
+                    +image('content/slider-img.png', "slider-img")
+                    .slider-review
+                      ul.review-list
+                        li.slider-review__item
+                          a.review-link
+                            +image('content/slider1.png', 'review-img')
+                        li.slider-review__item
+                          a.review-link
+                            +image('content/slider2.png', 'review-img')
+                        li.slider-review__item
+                          a.review-link
+                            +image('content/slider3.png', 'review-img')
+                        li.slider-review__item
+                          a.review-link 
+                          +image('content/slider4.png', 'review-img')
+                  .slider-work__buttons
+                    .btn-work__left
+                      a(href='#').btn-work
+                       +icon('arrow-down', 'icon-btn__work--left') 
+                    .btn-work__right
+                      a(href='#').btn-work
+                        +icon('arrow-down', 'icon-btn__work--right')
+
+
+
+              .work-right
+                .work-text
+                  .text-skills
+                    -
+                      let workSkills = ['HTML', 'CSS', 'Javascript',]
+                    ul.wokr-skills
+                      each item in workSkills
+                        li.work-skills__items
+                          .work-skills__name #{item}
+                  .text-info
+                    .title-site Сайт школы образования
+                    .about-user Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .look-website
+                      a.look-link
+                        +icon('link', 'work-icon__link')
+                        .look__link__text Посмотреть сайт
+
+
+
+
+
+
+
+
+
+
+
+
+        .aboutContact-wrapper 
+          .parallax-buda  
+            +image('content/Budda.png', 'buda-icon')      
+          section.section.about-me
+            .container.container-aboutMe
+              .title-buttons    
+                h1.title-aboutMe Что обо мне говорят
+                .buttons-slider
+                  button(type='button').buttons-left
+                    .left__arrow 
+                  button(type='button').buttons-right
+                    .right__arrow
+              .slider-about
+
+                ul.slider-about__list
+                  li.slider-about__item
+                    .about-block__slider
+                      .review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+
+                      .rewiew-user
+                        .user-icon
+                          +image('content/kovalchuk.png', 'user-photo')
+                        .user-info
+                          .user-name Ковальчук Дмитрий
+                          .user-post Основатель Loftschool
+                  li.slider-about__item
+
+                    .about-block__slider
+                      .review-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                      .rewiew-user
+                        .user-icon
+                          +image('content/saban.png', 'user-photo')
+                        .user-info
+                          .user-name Владимир Сабанцев
+                          .user-post Преподаватель
+          section.contact
+            .container.container-contact
+              .contact-content
+                .contact-text
+                  h5.contact-title Связаться со мной  
+                .contact-form
+                  form(action='#').contact-me
+                    .user-contact
+                      .form-user
+                        label(for='#').entre-name Введите имя
+                        .form-block
+                          +icon('user', 'form-icon')
+                          input(type="text" id="name" placeholder="Stanislav Sechaud").form-name
+
+                      .form-email
+                        label(for='#').entre-email Введите ваш email
+                        .form-block
+                          +icon('envelope', 'form-icon')
+                          input(type="email" id="email" placeholder="loftschool@study.com").email
+                    .form-message
+                      label(for='#').user-message  Сообщение к письму
+                      .form-block.form-block--textarea
+                        +icon('message', 'form-icon form-icon--message')
+                        
+                        textarea(for='#' id='textarea' placeholder  ='Требуется ваша помощь в создании сайта.\n Интересуют сроки и цена вопроса').message
+                    .btn
+                      button(type='submit').contact-button Отправить               
+
+
+
+  footer.footer
+    .container.container-footer
+      .footer-left
+        .copyright © 2019
+        .footer-name
+          .name-dev Sechaud Stanislav
+          .website-dev Личный сайт веб-разработчика
+      .footer-right
+        nav.footer-nav
+          - let menuFooter = ['Главная', 'Обо мне', 'Навыки', 'Работа', 'Отзывы', 'Связаться', ];
+
+            ul.footer-menu
+              each items in menuFooter
+                li.footer-menu__items
+                  a.footer-menu__link #{items}   
+        .footer-content
+          .footer-content__left
+            .website-working Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+            -let iconsFooter = ['insta', 'vk', 'github'];
+            ul.social-footer
+              each item in iconsFooter
+                li.socila-footer__item
+                  a.social-link__footer
+                    +icon(item, 'socials-icon__footer')
+          .footer-content__right
+            .quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+            .quote-name 
+              a(href="https://www.google.com/search?q=Martin+Golding&oq=Martin+Golding&aqs=chrome..69i57j0l7.871j0j7&sourceid=chrome&ie=UTF-8").quote-avtor Martin Golding
+
 
 
