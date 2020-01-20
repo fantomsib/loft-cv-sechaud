@@ -1,5 +1,6 @@
 .work {
-  padding-bottom: 170px;
+  /padding-bottom: 80px;
+  position: relative;
 }
 
 .container-work {
@@ -11,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .work-row {
@@ -30,6 +34,10 @@
   width: 65%;
   position: relative;
   z-index: 5;
+  @include tablets {
+    width: 90%;
+    margin-bottom: 70px;
+  }
 
   &::before {
     content: '4';
@@ -43,6 +51,11 @@
     right: -160px;
     top: 220px;
     @include desktop {
+      font-size: 300px;
+      font-weight: 800;
+      line-height: 48px;
+      right: -90px;
+      top: 90px;
       content: '2';
     }
   }
@@ -73,6 +86,9 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  @include phones {
+    display: none;
+  }
 }
 
 .review-list {
@@ -107,7 +123,10 @@
   display: flex;
   z-index: 5;
   @include desktop {
-     width: 30%;
+    width: 27%;
+  }
+  @include tablets {
+    width: 100%;
   }
 }
 
@@ -115,13 +134,31 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
+  @include phones {
+  }
+}
+
+.text-skills {
+  margin-bottom: 50px;
+  @include tablets {
+    width: 70%;
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 
 .wokr-skills {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 50px;
+  @include tablets {
+    justify-content: space-between;
+  }
 }
 
 .work-skills__items {
@@ -148,6 +185,9 @@
 .text-info {
   display: flex;
   flex-direction: column;
+  @include tablets {
+    align-items: center;
+  }
 }
 
 .title-site {
@@ -156,7 +196,11 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 48px;
+  display: flex;
   margin-bottom: 32px;
+  @include phones {
+    width: 65%;
+  }
 }
 
 .about-user {
@@ -167,6 +211,13 @@
   line-height: 30px;
   margin-bottom: 20px;
   width: 81%;
+  @include tablets {
+    text-align: center;
+    width: 65%;
+  }
+  @include phones {
+    text-align: left;
+  }
 }
 
 .look-link {
@@ -209,6 +260,9 @@
   background-color: #353e4e;
   justify-content: center;
   align-items: center;
+  &:hover{
+    opacity: 0.9;
+  }
 }
 
 .icon-btn__work--right,

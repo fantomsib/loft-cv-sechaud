@@ -6,7 +6,7 @@
 }
 
 .contaner-about {
-  justify-content: space-around;
+  justify-content: center;
   display: flex;
   @include desktop {
     //justify-content: space-around;
@@ -43,6 +43,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include desktop {
+    
+  }
   @include phones {
     width: 100%;
   }
@@ -54,6 +57,9 @@
   width: 200px;
   height: 200px;
   align-self: center;
+  @include desktop {
+  
+  }
   @include tablets {
     width: 172px;
     height: 172px;
@@ -74,7 +80,6 @@
 .developer-data__table {
   width: 100%;
   display: flex;
-  
 }
 
 tbody {
@@ -82,14 +87,15 @@ tbody {
   display: flex;
 
   //display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .developer-data__row {
   width: 100%;
   display: flex;
   margin-bottom: 10px;
-  &:last-child{
+
+  &:last-child {
     margin-bottom: 0px;
   }
 }
@@ -188,7 +194,7 @@ tbody {
   flex-direction: column;
   width: 35%;
   @include desktop {
-    width: 45%;
+    width: 50%;
   }
   @include phones {
     width: 100%;

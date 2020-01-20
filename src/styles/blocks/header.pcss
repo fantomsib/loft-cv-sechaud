@@ -3,12 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .header-logo {
   width: 47px;
   height: 26px;
+}
+
+.logo {
+  text-decoration: uppercase;
   color: #464d62;
   font-family: "Open Sans - Extrabold";
   font-size: 36px;
@@ -17,10 +20,10 @@
 }
 
 .header-menu {
+  padding-left: 130px;
+  padding-right: 50px;
   display: flex;
-  flex-basis: 50%;
   @include desktop {
-    flex-basis: 65%;
   }
   @include tablets {
     display: none;
@@ -28,19 +31,25 @@
 }
 
 .nav {
-  width: 100%;
+  //width: 100%;
 }
 
 .nav-list {
   display: flex;
-  flex-basis: 100%;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+ 
+  
 }
 
 .nav-item {
   display: flex;
+
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .nav-link {
@@ -57,24 +66,19 @@
 
 .link {
   display: flex;
-  width: 9%;
   position: relative;
-  @include desktop {
-    width: 15%;
-  }
-  @include tablets {
-  
-  }
 }
 
 .social {
   display: flex;
-  flex-basis: 100%;
-  justify-content: space-between;
   cursor: pointer;
-  flex-wrap: wrap;
-  @include tablets {
-    
+}
+
+.social__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0px;
   }
 }
 
@@ -87,17 +91,14 @@
   }
 }
 
-
 .hamburger {
   display: flex;
   flex-direction: column;
-
   display: none;
   @include tablets {
     display: flex;
     position: absolute;
     right: 0;
-    
   }
 }
 

@@ -11,27 +11,27 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        .wrapper-section
+        .wrapper-section  
           .parallax
-            +image('content/welcome-section-bag.png', 'parallax-image')
+            +image('content/welcome-section-bag.png', 'parallax-image')  
           section.section.welcome.fullscreen-section
             .container.container-welcome
               header.header
                 .header-logo
                   .logo SS
                 .header-menu
-                  - let menu = ['Главная', 'Обо мне', 'Навыки', 'Работа', 'Отзывы', 'Связаться', ];
+                  - let menu = ['Главная', 'Обо мне', 'Навыки', 'Работа', 'Отзывы', 'Связаться',];
                   nav.nav
                     ul.nav-list
                       each items in menu
                         li.nav-item
-                          a(href="").nav-link #{items}   
+                          a(href="#").nav-link #{items}   
                 .link
                   -let icons = ['insta', 'vk', 'github'];
                   ul.social
                     each item in icons
-                      li.socila__item
-                        a(href="").social__link
+                      li.social__item
+                        a(href="#" target='_blanc').social__link
                           +icon(item, 'socials__icon')
                 .hamburger
                   .hamburger-icon
@@ -43,7 +43,7 @@ html(lang="ru")
                   .name-developer Stanislav<br>Sechaud
               .control-welcome
                 .scroll
-                  a.scroll-link
+                  a(href ='#').scroll-link
                     .scroll-text Скролл
                     +icon('scroll', 'scroll-icon')
           section.section.about
@@ -76,15 +76,11 @@ html(lang="ru")
             polygon(points="0,0 0,100 1000,100")
           svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polygon(points="0,100 1000,100 1000,0")
-
-
-
         section.section.skills
           .container.container-skills
             .skill-text
               h3.skills-title Чем я могу быть полезен вам
               .skills-about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            
             .skills-content
               .skills-block
                 .skills-title Front-end
@@ -112,12 +108,6 @@ html(lang="ru")
                               circle(class="skill-circle-ring" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="#D2D3D4" stroke-width="2")
                               circle(class="skill-circle-segment" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="url(#circleGradient)" stroke-dasharray=`80 20` stroke-dashoffset="50" stroke-width="4")              
                       .skill-name=i
-                      
-                            
-                      
-                            
-    
-                                    
             .skills-backpack
               +image('content/skills-backpack.png', 'skills-icon')        
         section.section.work
@@ -128,22 +118,20 @@ html(lang="ru")
               .work-left
                 .slider 
                   .slider-display
-
-
                     +image('content/slider-img.png', "slider-img")
                     .slider-review
                       ul.review-list
                         li.slider-review__item
-                          a.review-link
+                          a(href ='#').review-link
                             +image('content/slider1.png', 'review-img')
                         li.slider-review__item
-                          a.review-link
+                          a(href ='#').review-link
                             +image('content/slider2.png', 'review-img')
                         li.slider-review__item
-                          a.review-link
+                          a(href ='#').review-link
                             +image('content/slider3.png', 'review-img')
                         li.slider-review__item
-                          a.review-link 
+                          a(href ='#').review-link 
                           +image('content/slider4.png', 'review-img')
                   .slider-work__buttons
                     .btn-work__left
@@ -152,9 +140,6 @@ html(lang="ru")
                     .btn-work__right
                       a(href='#').btn-work
                         +icon('arrow-down', 'icon-btn__work--right')
-
-
-
               .work-right
                 .work-text
                   .text-skills
@@ -168,22 +153,17 @@ html(lang="ru")
                     .title-site Сайт школы образования
                     .about-user Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                     .look-website
-                      a.look-link
+                      a(href ='#').look-link
                         +icon('link', 'work-icon__link')
                         .look__link__text Посмотреть сайт
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        section.section.skills
         .aboutContact-wrapper 
+          .triangles.triangles-work
+            svg.triangles__item.triangles__item-work(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,0 0,100 1000,100")
+            svg.triangles__item.triangles__item-work(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,100 1000,100 1000,0")
           .parallax-buda  
             +image('content/Budda.png', 'buda-icon')      
           section.section.about-me
@@ -196,12 +176,10 @@ html(lang="ru")
                   button(type='button').buttons-right
                     .right__arrow
               .slider-about
-
                 ul.slider-about__list
                   li.slider-about__item
                     .about-block__slider
                       .review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-
                       .rewiew-user
                         .user-icon
                           +image('content/kovalchuk.png', 'user-photo')
@@ -209,7 +187,6 @@ html(lang="ru")
                           .user-name Ковальчук Дмитрий
                           .user-post Основатель Loftschool
                   li.slider-about__item
-
                     .about-block__slider
                       .review-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
                       .rewiew-user
@@ -245,9 +222,6 @@ html(lang="ru")
                         textarea(for='#' id='textarea' placeholder  ='Требуется ваша помощь в создании сайта.\n Интересуют сроки и цена вопроса').message
                     .btn
                       button(type='submit').contact-button Отправить               
-
-
-
   footer.footer
     .container.container-footer
       .footer-left
@@ -262,7 +236,7 @@ html(lang="ru")
             ul.footer-menu
               each items in menuFooter
                 li.footer-menu__items
-                  a.footer-menu__link #{items}   
+                  a(hreh='#').footer-menu__link #{items}   
         .footer-content
           .footer-content__left
             .website-working Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
@@ -270,12 +244,12 @@ html(lang="ru")
             ul.social-footer
               each item in iconsFooter
                 li.socila-footer__item
-                  a.social-link__footer
+                  a(hreh='' target='_blanc').social-link__footer
                     +icon(item, 'socials-icon__footer')
           .footer-content__right
             .quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
             .quote-name 
-              a(href="https://www.google.com/search?q=Martin+Golding&oq=Martin+Golding&aqs=chrome..69i57j0l7.871j0j7&sourceid=chrome&ie=UTF-8").quote-avtor Martin Golding
+              a(target='_blanc' href="https://www.google.com/search?q=Martin+Golding&oq=Martin+Golding&aqs=chrome..69i57j0l7.871j0j7&sourceid=chrome&ie=UTF-8").quote-avtor Martin Golding
 
 
 

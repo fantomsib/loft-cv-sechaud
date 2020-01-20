@@ -64,6 +64,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.55;
+  }
 }
 
 .buttons-left {
@@ -90,13 +94,13 @@
 
 .slider-about {
   display: flex;
-  width: 65%;
+  width: 80%;
   position: relative;
   @include desktop {
-    width: 80%;
+    width: 90%;
   }
   @include tablets {
-    width: 90%;
+    width: 100%;
   }
   @include phones {
     width: 100%;
@@ -116,13 +120,13 @@
 
 .slider-about__item {
   display: flex;
-  width: 40%;
+  width: 48%;
   position: relative;
   @include desktop {
-    width: 41%;
+    width: 45%;
   }
   @include tablets {
-    width: 47%;
+    width: 50%;
   }
   @include phones {
     flex: 0 0 100%;
@@ -165,9 +169,7 @@
   line-height: 30px;
   display: flex;
   margin-bottom: 30px;
-  @include phones {
-    //font-size: 14px;
-  }
+  width: 90%;
 }
 
 .user-icon {
@@ -181,6 +183,7 @@
 .rewiew-user {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   @include phones {
     //justify-content: center;
   }
@@ -216,7 +219,6 @@
 .email-block {
   display: flex;
   align-items: center;
-  
 }
 
 .email-icon {
@@ -224,5 +226,4 @@
   height: 23px;
   fill: #464d62;
   opacity: 0.3;
-  
 }
