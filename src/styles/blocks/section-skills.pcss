@@ -75,11 +75,17 @@
 
 .skills-list {
   display: flex;
-  flex-basis: 100%;
+  width: 80%;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include desktop {
+    width: 100%;
+    justify-content: center;
+  }
+
   @include tablets {
     width: 100%;
+   justify-content: center;
   }
   @include phones {
     width: 100%;
@@ -128,7 +134,7 @@
   top: 90px;
   z-index: 0;
   @include desktop {
-    left: -270px;
+    left: -240px;
   }
   @include tablets {
     position: static;

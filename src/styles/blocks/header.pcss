@@ -8,6 +8,9 @@
 .header-logo {
   width: 47px;
   height: 26px;
+  display: flex;
+  align-items: center;
+ 
 }
 
 .logo {
@@ -15,8 +18,10 @@
   color: #464d62;
   font-family: "Open Sans - Extrabold";
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 30px;
+  display: flex;
+
 }
 
 .header-menu {
@@ -38,13 +43,10 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
- 
-  
 }
 
 .nav-item {
   display: flex;
-
   margin-right: 60px;
 
   &:last-child {
@@ -72,6 +74,12 @@
 .social {
   display: flex;
   cursor: pointer;
+  @include tablets {
+    margin-right: 90px;
+  }
+  @include phones{
+    display: none;
+  }
 }
 
 .social__item {
@@ -91,20 +99,26 @@
   }
 }
 
+.hamburger--link{
+display: flex;
+&:hover{
+  opacity: 0.55;
+}
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
   display: none;
   @include tablets {
     display: flex;
-    position: absolute;
-    right: 0;
+    //position: absolute;
   }
 }
 
 .hamburger-icon {
   width: 24px;
   height: 4px;
-  background-color: black;
+  background-color: #464d62;
   margin: 2px 0;
 }

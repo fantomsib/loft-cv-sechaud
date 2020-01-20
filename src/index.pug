@@ -16,7 +16,7 @@ html(lang="ru")
             +image('content/welcome-section-bag.png', 'parallax-image')  
           section.section.welcome.fullscreen-section
             .container.container-welcome
-              header.header
+              header.header 
                 .header-logo
                   .logo SS
                 .header-menu
@@ -33,10 +33,11 @@ html(lang="ru")
                       li.social__item
                         a(href="#" target='_blanc').social__link
                           +icon(item, 'socials__icon')
-                .hamburger
-                  .hamburger-icon
-                  .hamburger-icon
-                  .hamburger-icon         
+                  a(href='#').hamburger--link
+                    .hamburger
+                      .hamburger-icon
+                      .hamburger-icon
+                      .hamburger-icon         
               .welcome-content
                 .name-title
                   .title-website Личный сайт <br> веб разработчика 
