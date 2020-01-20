@@ -12,14 +12,14 @@
 .container-contact {
   height: 100%;
 }
-
+//-----контент секции связи
 .contact-content {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-
+//---блок обертка для заголовка
 .contact-text {
   margin-bottom: 100px;
   display: flex;
@@ -29,7 +29,7 @@
     margin-bottom: 50px;
   }
 }
-
+//---заголовок секции 
 .contact-title {
   color: #464d62;
   font-family: "Open Sans";
@@ -40,7 +40,7 @@
     font-size: 24px;
   }
 }
-
+//---Блок обертка для ФОРМЫ
 .contact-form {
   display: flex;
   width: 72%;
@@ -48,7 +48,7 @@
     width: 100%;
   }
 }
-
+//---ФОРМА-----------
 .contact-me {
   width: 100%;
   display: flex;
@@ -57,14 +57,7 @@
     justify-content: center;
   }
 }
-
-.btn {
-  display: flex;
-  @include tablets {
-    justify-content: center;
-  }
-}
-
+//---блок обертка для инпута с именем юзера
 .user-contact {
   display: flex;
   //align-items: center;
@@ -74,7 +67,7 @@
     flex-direction: column;
   }
 }
-
+//----блок обертка для инпута имени и емаила 
 .form-user {
   width: 45%;
   display: flex;
@@ -91,113 +84,7 @@
     opacity: 0.9;
   }
 }
-
-.form-name {
-  width: 100%;
-}
-
-.form-email {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  @include tablets {
-    width: 48%;
-  }
-  @include phones {
-    width: 100%;
-    align-items: center;
-  }
-
-  &:hover .entre-email,
-   {
-    opacity: 0.9;
-  }
-}
-
-.email,
-.form-name,
-.message {
-  width: 100%;
-  color: #464d62;
-  font-family: "Open Sans";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 48px;
-  border: none;
-  border-bottom: 1px solid #a0a4b0;
-  background-color: transparent;
-  transition: 0.3s;
-  position: relative;
-  padding-left: 45px;
-  display: flex;
-  @include tablets {
-    padding-left: 40px;
-  }
-  @include phones {
-    padding-left: 0px;
-    text-align: center;
-    font-size: 16px;
-  }
-}
-
-.entre-name,
-.entre-email,
-.user-message {
-  opacity: 0.3;
-  color: #464d62;
-  font-family: "Open Sans - Semibold";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  margin-bottom: 30px;
-  padding-left: 45px;
-  @include tablets {
-    padding-left: 40px;
-  }
-  @include phones {
-    padding-left: 0px;
-  }
-}
-
-.contact-button {
-  display: flex;
-  border-radius: 40px 5px;
-  background-color: #ffffff;
-  background-image: linear-gradient(to right, #9300e8 0%, #4a00ed 100%);
-  min-width: 347px;
-  min-height: 80px;
-  font-family: "Open Sans";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: #ffffff;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    transform: scale(1.05 1.05);
-  }
-  @include phones {
-    min-width: 259px;
-    min-height: 60px;
-  }
-}
-
-.form-message {
-  margin-bottom: 61px;
-  display: flex;
-  flex-direction: column;
-
-  &:hover .user-message {
-    opacity: 0.9;
-  }
-  @include phones {
-    width: 100%;
-    align-items: center;
-  }
-}
-
+//----блок обертка для инпутов
 .form-block {
   display: flex;
   position: relative;
@@ -224,20 +111,11 @@
   }
 }
 
-.message {
-  resize: none;
-  @include phones {
-    display: flex;
-    padding-left: 0px;
-    padding-bottom: 20px;
-    line-height: 30px;
-  }
-}
-
+//----иконка textarea
 .form-icon--message {
   top: 15px;
 }
-
+//-----иконки инпутов
 .form-icon {
   width: 25px;
   height: 23px;
@@ -248,5 +126,147 @@
     display: none;
   }
 }
+//-----инпут имени юзера
+.form-name {
+  width: 100%;
+}
 
 
+//----блок обертка емаил адреса
+.form-email {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  @include tablets {
+    width: 48%;
+  }
+  @include phones {
+    width: 100%;
+    align-items: center;
+  }
+
+  &:hover .entre-email,
+   {
+    opacity: 0.9;
+  }
+}
+//-----стилизация инпутов и текстарии
+.email,
+.form-name,
+.message {
+  width: 100%;
+  color: #464d62;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 48px;
+  border: none;
+  border-bottom: 1px solid #a0a4b0;
+  background-color: transparent;
+  transition: 0.3s;
+  position: relative;
+  padding-left: 45px;
+  display: flex;
+  @include tablets {
+    padding-left: 40px;
+  }
+  @include phones {
+    padding-left: 0px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+//-----стилизация лэйблов нэйм емаил и текстарии
+.entre-name,
+.entre-email,
+.user-message {
+  opacity: 0.3;
+  color: #464d62;
+  font-family: "Open Sans - Semibold";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+  padding-left: 45px;
+  @include tablets {
+    padding-left: 40px;
+  }
+  @include phones {
+    padding-left: 0px;
+  }
+}
+
+
+//----блок обертка текстарии
+.form-message {
+  margin-bottom: 61px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover .user-message {
+    opacity: 0.9;
+  }
+  @include phones {
+    width: 100%;
+    align-items: center;
+  }
+}
+//----ТEXTAREA
+.message {
+  resize: none;
+  @include phones {
+    display: flex;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    line-height: 30px;
+  }
+}
+
+
+
+//----обертка кнопки Формы
+.btn {
+  display: flex;
+  @include tablets {
+    justify-content: center;
+  }
+}
+//----кнопка формы
+.contact-button {
+  display: flex;
+  border-radius: 40px 5px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #9300e8 0%, #4a00ed 100%);
+  min-width: 347px;
+  min-height: 80px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05 1.05);
+  }
+  @include phones {
+    min-width: 259px;
+    min-height: 60px;
+  }
+}
+
+/*
+.email-block {
+  display: flex;
+  align-items: center;
+}
+
+.email-icon {
+  width: 30px;
+  height: 23px;
+  fill: #464d62;
+  opacity: 0.3;
+}
+*/

@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
 }
-
+//---блок обертка Заголовка и КНОПОК сладйреа
 .title-buttons {
   display: flex;
   width: 50%;
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
   }
 }
-
+//---Заголовок ЧТО БО МНЕ ГОВОРЯТ
 .title-aboutMe {
   color: #464d62;
   font-family: "Open Sans";
@@ -43,17 +43,15 @@
     margin-bottom: 20px;
   }
 }
-
+//---КНОПКИ СЛАДЙЕРА
 .buttons-slider {
   display: flex;
-  //flex-basis: 22%;
   justify-content: space-between;
-  //flex-wrap: wrap;
   @include phones {
     width: 40%;
   }
 }
-
+//--ЛЕвая и Правая Кнопка
 .buttons-left,
 .buttons-right {
   width: 50px;
@@ -69,14 +67,14 @@
     opacity: 0.55;
   }
 }
-
+//---Левая кнопка
 .buttons-left {
   margin-right: 30px;
   @include phones {
     margin-right: 0px;
   }
 }
-
+//----левая стрелка левой кнопки
 .left__arrow {
   width: 10px;
   height: 10px;
@@ -84,14 +82,14 @@
   transform: rotateY(180deg);
   display: flex;
 }
-
+//---правая стрелка правой кнопки
 .right__arrow {
   width: 10px;
   height: 10px;
   background: svg-load('arrow-down.svg', fill= #464d62, width=100%, height=100%);
   display: flex;
 }
-
+//---СЛАЙДЕР КАРУСЕЛЬ С ОТЗЫВАМИ БЛОК
 .slider-about {
   display: flex;
   width: 80%;
@@ -107,7 +105,7 @@
     overflow: hidden;
   }
 }
-
+//---Списко СЛайдера
 .slider-about__list {
   display: flex;
   width: 100%;
@@ -117,7 +115,7 @@
     overflow: hidden;
   }
 }
-
+//---Элементы Салйдера
 .slider-about__item {
   display: flex;
   width: 48%;
@@ -152,14 +150,14 @@
     }
   }
 }
-
+//---Блок обертка внутри эелемента слайдера
 .about-block__slider {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
-
+//-----Текст отзыва 
 .review-text {
   opacity: 0.5;
   color: #464d62;
@@ -171,7 +169,13 @@
   margin-bottom: 30px;
   width: 90%;
 }
-
+//-----Блок обертка для юзера и его имени
+.rewiew-user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+//---Фото коментатора Блок
 .user-icon {
   margin-right: 30px;
   display: flex;
@@ -179,27 +183,18 @@
     margin-right: 22px;
   }
 }
-
-.rewiew-user {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  @include phones {
-    //justify-content: center;
-  }
-}
-
+//---Фото комментатора
 .user-photo {
   border-radius: 50%;
   max-width: 75px;
   min-height: 73px;
 }
-
+//---блок имени и профессии
 .user-info {
   display: flex;
   flex-direction: column;
 }
-
+//----имя человека отзыва
 .user-name {
   color: #464d62;
   font-family: "Open Sans";
@@ -207,7 +202,7 @@
   font-weight: 700;
   margin-bottom: 8px;
 }
-
+//----профессия человека отзыва
 .user-post {
   opacity: 0.3;
   color: #464d62;
@@ -216,14 +211,4 @@
   font-weight: 400;
 }
 
-.email-block {
-  display: flex;
-  align-items: center;
-}
 
-.email-icon {
-  width: 30px;
-  height: 23px;
-  fill: #464d62;
-  opacity: 0.3;
-}

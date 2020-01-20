@@ -84,9 +84,9 @@ html(lang="ru")
               .skills-about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills-content
               .skills-block
-                .skills-title Front-end
+                .skills-name__list Front-end
                 ul.skills-list
-                  each i in ['HTML5', 'CSS3', 'Javascript', 'Jquery\n и Vue.js',]
+                  each i in ['HTML5', 'CSS3', 'Javascript', 'Jquery Vue.js',]
                     li.skills__item
                       svg(width="100%" height="100%" viewBox="0 0 42 42" class="skill-circle")
                               linearGradient#circleGradient(x1="0%" y1="0%" x2="0%" y2="100%")
@@ -97,7 +97,7 @@ html(lang="ru")
                               circle(class="skill-circle-segment" cx="21" cy="21" r="15.91549430918954" fill="none" stroke="url(#circleGradient)" stroke-dasharray=`80 20` stroke-dashoffset="50" stroke-width="4")              
                       .skill-name=i
               .skills-block
-                .skills-title Workflow
+                .skills-name__list Workflow
                 ul.skills-list
                   each i in ['GIT', 'Terminal', 'Gulp', 'Webpack',]
                     li.skills__item
@@ -158,7 +158,7 @@ html(lang="ru")
                         +icon('link', 'work-icon__link')
                         .look__link__text Посмотреть сайт
         
-        section.section.skills
+        
         .aboutContact-wrapper 
           .triangles.triangles-work
             svg.triangles__item.triangles__item-work(viewBox="0 0 1000 100" preserveAspectRatio="none")

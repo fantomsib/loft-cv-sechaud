@@ -10,7 +10,7 @@
   width: 100%;
   justify-content: center;
 }
-
+//блок обертка для заголовка и подтекста секции
 .skill-text {
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
     align-items: center;
   }
 }
-
+//заголовок секции 
 .skills-title {
   color: #464d62;
   font-family: "Open Sans";
@@ -39,7 +39,7 @@
     text-align: center;
   }
 }
-
+//блок текст про то как я сделал этот сайт
 .skills-about {
   opacity: 0.5;
   color: #464d62;
@@ -58,6 +58,7 @@
   }
 }
 
+//-----контент секции
 .skills-content {
   display: flex;
   flex-direction: column;
@@ -72,7 +73,29 @@
     align-items: center;
   }
 }
-
+//-----Блок обертка для списка со скиллами и Заголовком
+.skills-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+  z-index: 5;
+  @include tablets {
+    width: 90%;
+  }
+  @include phones {
+    align-items: center;
+  }
+}
+//----Заголовок Скилов Фронт и Форкфлоу
+.skills-name__list {
+  color: #464d62;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;
+}
+//----Список скиллов
 .skills-list {
   display: flex;
   width: 80%;
@@ -82,30 +105,28 @@
     width: 100%;
     justify-content: center;
   }
-
   @include tablets {
     width: 100%;
-   justify-content: center;
+    justify-content: center;
   }
   @include phones {
     width: 100%;
   }
 }
-
-.skill-circle {
-  display: flex;
-  width: 150px;
-  height: 150px;
-  
-}
-
-.skills__item{
+//---элементы скилов
+.skills__item {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+//---свг круги скиллов
+.skill-circle {
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+//----текст скилов внутри кругов
 .skill-name {
   display: flex;
   align-items: center;
@@ -117,6 +138,8 @@
   text-transform: uppercase;
   opacity: 0.5;
   position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -127,7 +150,7 @@
   @include phones {
   }
 }
-
+//-----блок с картинкой рюкзака
 .skills-backpack {
   position: absolute;
   left: -135px;
@@ -143,19 +166,7 @@
   }
 }
 
-.skills-block {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 50px;
-  z-index: 5;
-  @include tablets {
-    width: 90%;
-  }
-  @include phones {
-    align-items: center;
-  }
-}
+
 
 
 

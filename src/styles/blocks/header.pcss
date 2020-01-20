@@ -1,18 +1,18 @@
+//шапка хэдар
 .header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+//блок обертка логотипа хэдара
 .header-logo {
   width: 47px;
   height: 26px;
   display: flex;
   align-items: center;
- 
 }
-
+//логотип текст хэдора
 .logo {
   text-decoration: uppercase;
   color: #464d62;
@@ -21,9 +21,8 @@
   font-weight: 800;
   line-height: 30px;
   display: flex;
-
 }
-
+//блок обертка нафигации 
 .header-menu {
   padding-left: 130px;
   padding-right: 50px;
@@ -34,17 +33,13 @@
     display: none;
   }
 }
-
-.nav {
-  //width: 100%;
-}
-
+//----навигация список УЛ
 .nav-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-
+//эелементы навигации
 .nav-item {
   display: flex;
   margin-right: 60px;
@@ -53,7 +48,7 @@
     margin-right: 0px;
   }
 }
-
+//Линк элементов навигации
 .nav-link {
   color: #464d62;
   font-family: "Open Sans";
@@ -65,23 +60,23 @@
     opacity: 0.5;
   }
 }
-
+//---блок обертка для соц сетей
 .link {
   display: flex;
   position: relative;
 }
-
+//список соц сетей
 .social {
   display: flex;
   cursor: pointer;
   @include tablets {
     margin-right: 90px;
   }
-  @include phones{
+  @include phones {
     display: none;
   }
 }
-
+//элемент соц сетей
 .social__item {
   margin-right: 40px;
 
@@ -89,7 +84,7 @@
     margin-right: 0px;
   }
 }
-
+//иконки соц сетей
 .socials__icon {
   width: 25px;
   height: 25px;
@@ -98,24 +93,24 @@
     opacity: 0.55;
   }
 }
+//линк меню гамбургер
+.hamburger--link {
+  display: flex;
 
-.hamburger--link{
-display: flex;
-&:hover{
-  opacity: 0.55;
+  &:hover {
+    opacity: 0.55;
+  }
 }
-}
-
+//гамбургер
 .hamburger {
   display: flex;
   flex-direction: column;
   display: none;
   @include tablets {
     display: flex;
-    //position: absolute;
   }
 }
-
+// нарисованный гамбургер
 .hamburger-icon {
   width: 24px;
   height: 4px;

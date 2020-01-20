@@ -2,7 +2,7 @@
   z-index: 10;
   display: flex;
   padding-top: 100px;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
 }
 
 .contaner-about {
@@ -21,7 +21,7 @@
   }
 }
 
-//about-left
+//about-left левая секция контента
 
 .about-left {
   display: flex;
@@ -38,19 +38,19 @@
     width: 100%;
   }
 }
-
+//----блок контента с фоткой и данными юзера
 .developer {
   display: flex;
   flex-direction: column;
   align-items: center;
   @include desktop {
-    
   }
   @include phones {
     width: 100%;
   }
 }
 
+//---Блок обертка Мое фото
 .devoloper-photo {
   margin-bottom: 48px;
   display: flex;
@@ -58,36 +58,33 @@
   height: 200px;
   align-self: center;
   @include desktop {
-  
   }
   @include tablets {
     width: 172px;
     height: 172px;
   }
 }
-
+//--мое фото
 .dev-icon {
   max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
-
+//---- блок обертка таблицы с текстовыми данными обо мне
 .developer-text {
   display: flex;
   width: 100%;
 }
-
-.developer-data__table {
-  width: 100%;
-  display: flex;
-}
-
+//----таблица
 tbody {
   width: 100%;
   display: flex;
-
-  //display: flex;
   flex-direction: column;
+}
+//--таблица
+.developer-data__table {
+  width: 100%;
+  display: flex;
 }
 
 .developer-data__row {
@@ -120,74 +117,7 @@ tbody {
 }
 
 
-
-/*
-.info-list {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  @include phones {
-    width: 100%;
-    align-items: center;
-  }
-}
-
-.info__item {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: space-between;
-  margin-bottom: 26px;
-  flex-wrap: wrap;
-
-  &:last-child {
-    margin-bottom: 0px;
-  }
-  @include tablets {
-    margin-bottom: 10px;
-    width: 80%;
-  }
-  @include phones {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-
-.info__data {
-  display: flex;
-  opacity: 0.3;
-  color: #464d62;
-  font-family: "Open Sans - Semibold";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  flex-basis: 40%;
-  @include tablets {
-    font-size: 14px;
-    flex-basis: 40%;
-  }
-  @include phones {
-    flex-basis: 40%;
-  }
-}
-
-.info__value {
-  display: flex;
-  color: #464d62;
-  font-family: "Open Sans - Semibold";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: left;
-  flex-basis: 60%;
-  @include tablets {
-    font-size: 14px;
-    flex-basis: 40%;
-  }
-  @include phones {
-    flex-basis: 45%;
-  }
-}*/
-
+//----Правый блок контента
 ////About-right 
 .about-right {
   display: flex;
@@ -201,7 +131,7 @@ tbody {
     align-items: center;
   }
 }
-
+//---привет меня зовут
 .about-title {
   opacity: 0.5;
   color: #464d62;
@@ -217,7 +147,7 @@ tbody {
     margin-bottom: 4px;
   }
 }
-
+//---мое имя Stanislav Sechaud
 .about-name {
   color: #464d62;
   font-family: "Open Sans";
@@ -232,7 +162,8 @@ tbody {
     margin-bottom: 7px;
   }
 }
-
+//блок с текстом
+//---Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
 .about-work {
   opacity: 0.5;
   color: #464d62;
@@ -249,7 +180,8 @@ tbody {
     margin-bottom: 10px;
   }
 }
-
+//блок текст 
+//--Этот сайт я сделал в рамках обучения в Школе онлайн
 .about-loft {
   opacity: 0.5;
   color: #464d62;
