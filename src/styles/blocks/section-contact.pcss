@@ -131,6 +131,12 @@
   width: 100%;
 }
 
+.form-user{
+  @include phones{
+    margin-bottom: 40px;
+  }
+}
+
 
 //----блок обертка емаил адреса
 .form-email {
@@ -193,6 +199,8 @@
   }
   @include phones {
     padding-left: 0px;
+    margin-bottom: 30px;
+    
   }
 }
 
@@ -218,11 +226,11 @@
   resize: none;
   @include phones {
     display: flex;
-    padding-left: 0px;
+
     //padding-bottom: 20px;
-    line-height: 29px;
-    text-align: left;
-    justify-content: center;
+    line-height: 30px;
+    
+    
   }
   @include phones-420 {
    // resize: vertical;
