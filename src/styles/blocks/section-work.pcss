@@ -190,6 +190,13 @@
   @include desktop {
     width: 27%;
   }
+  @include bp-1105 {
+    width: 30%;
+  }
+
+  @include bp-1005 {
+    width: 32%;
+  }
   @include tablets {
     width: 100%;
   }
@@ -224,6 +231,10 @@
   @include desktop {
     flex-wrap: wrap;
   }
+  @include bp-1005 {
+    justify-content: space-evenly;
+  }
+
   @include tablets {
     justify-content: space-evenly;
   }
@@ -241,6 +252,7 @@
   @include desktop {
     margin-bottom: 10px;
   }
+
   @include tablets {
     margin-bottom: 0px;
   }

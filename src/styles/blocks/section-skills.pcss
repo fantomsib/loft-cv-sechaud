@@ -17,12 +17,44 @@
   margin-bottom: 70px;
   width: 40%;
   z-index: 5;
+  @include desktop {
+    width: 45%;
+    
+  }
+
+  @include bp-1068 {
+    width: 52%;
+  }
+
+  @include bp-860 {
+    width: 60%;
+  }
   @include tablets {
     width: 100%;
     align-items: center;
+    margin-bottom: 60px;
+  }
+  @include phones {
   }
 }
 //заголовок секции 
+
+.skills-title__block {
+  display: flex;
+  margin-bottom: 40px;
+
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 31px;
+    width: 46%;
+    text-align: center;
+    @include phones {
+      width: 76%;
+      text-align: left;
+    }
+  }
+}
+
 .skills-title {
   color: #464d62;
   font-family: "Open Sans";
@@ -30,14 +62,6 @@
   font-weight: 700;
   line-height: 36px;
   display: flex;
-  margin-bottom: 40px;
-  @include tablets {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  @include phones {
-    text-align: center;
-  }
 }
 //блок текст про то как я сделал этот сайт
 .skills-about {
@@ -52,8 +76,9 @@
     width: 55%;
     text-align: center;
   }
+
   @include phones {
-    width: 75%;
+    width: 76%;
     text-align: left;
   }
 }
@@ -67,10 +92,18 @@
   align-self: flex-end;
   @include desktop {
     width: 67%;
+    //align-items: center;
+  }
+
+
+
+  @include bp-860 {
+    width: 76%;
   }
   @include tablets {
     width: 100%;
     align-items: center;
+    margin-bottom: 100px;
   }
 }
 //-----Блок обертка для списка со скиллами и Заголовком
@@ -78,13 +111,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   z-index: 5;
+  @include desktop{
+    width: 80%;
+  }
+  @include bp-1068 {
+    width: 100%;
+    //align-items: center;
+  }
   @include tablets {
     width: 90%;
   }
   @include phones {
     align-items: center;
+    width: 100%;
   }
 }
 //----Заголовок Скилов Фронт и Форкфлоу
@@ -93,7 +134,16 @@
   font-family: "Open Sans";
   font-size: 24px;
   font-weight: 700;
+  display: flex;
   line-height: 48px;
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+   
+  }
+  
 }
 //----Список скиллов
 .skills-list {
@@ -103,7 +153,8 @@
   justify-content: space-between;
   @include desktop {
     width: 100%;
-    justify-content: center;
+    
+   
   }
   @include tablets {
     width: 100%;
@@ -119,6 +170,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include phones {
+    width: 50%;
+  }
 }
 //---свг круги скиллов
 .skill-circle {
@@ -148,6 +202,8 @@
   @include tablets {
   }
   @include phones {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 //-----блок с картинкой рюкзака
@@ -163,6 +219,12 @@
     position: static;
     width: 316px;
     height: 281px;
+  }
+  @include bp-1005 {
+    left: -300px;
+  }
+  @include bp-860 {
+    left: -400px;
   }
 }
 

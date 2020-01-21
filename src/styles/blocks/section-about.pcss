@@ -11,6 +11,12 @@
   @include desktop {
     //justify-content: space-around;
   }
+  @include bp-1005 {
+    justify-content: space-around;
+  }
+
+
+  
   @include tablets {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -31,8 +37,12 @@
   @include desktop {
     width: 40%;
   }
+
   @include tablets {
     width: 50%;
+  }
+  @include bp-670 {
+    width: 46%;
   }
   @include phones {
     width: 100%;
@@ -47,6 +57,7 @@
   }
   @include phones {
     width: 100%;
+    margin-bottom: 54px;
   }
 }
 
@@ -54,8 +65,8 @@
 .devoloper-photo {
   margin-bottom: 48px;
   display: flex;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
   align-self: center;
   @include desktop {
   }
@@ -126,6 +137,13 @@ tbody {
   @include desktop {
     width: 50%;
   }
+
+  @include tablets {
+    width: 47%;
+  }
+  @include bp-670 {
+    width: 45%;
+  }
   @include phones {
     width: 100%;
     align-items: center;
@@ -140,11 +158,9 @@ tbody {
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 15px;
-  @include tablets {
-    font-size: 14px;
-  }
+
   @include phones {
-    margin-bottom: 4px;
+    margin-bottom: 22px;
   }
 }
 //---мое имя Stanislav Sechaud
@@ -156,10 +172,10 @@ tbody {
   line-height: 48px;
   margin-bottom: 15px;
   @include tablets {
-    font-size: 30px;
+    // font-size: 30px;
   }
   @include phones {
-    margin-bottom: 7px;
+    margin-bottom: 52px;
   }
 }
 //блок с текстом
@@ -173,11 +189,11 @@ tbody {
   line-height: 30px;
   margin-bottom: 75px;
   @include tablets {
-    font-size: 14px;
+    //font-size: 14px;
     margin-bottom: 53px;
   }
   @include phones {
-    margin-bottom: 10px;
+    margin-bottom: 51px;
   }
 }
 //блок текст 
@@ -193,7 +209,7 @@ tbody {
   position: relative;
   align-items: flex-start;
   @include tablets {
-    font-size: 14px;
+    //font-size: 14px;
   }
 
   &::before {
