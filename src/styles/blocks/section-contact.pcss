@@ -113,7 +113,7 @@
 
 //----иконка textarea
 .form-icon--message {
-  top: 15px;
+  top: 35px;
 }
 //-----иконки инпутов
 .form-icon {
@@ -209,16 +209,25 @@
   @include phones {
     width: 100%;
     align-items: center;
+   
   }
 }
 //----ТEXTAREA
 .message {
+  padding-top: 20px;
   resize: none;
   @include phones {
     display: flex;
     padding-left: 0px;
-    padding-bottom: 20px;
-    line-height: 30px;
+    //padding-bottom: 20px;
+    line-height: 29px;
+    text-align: left;
+    justify-content: center;
+  }
+  @include phones-420 {
+   // resize: vertical;
+    // padding-bottom: 40px;
+    // line-height: 19px;
   }
 }
 
