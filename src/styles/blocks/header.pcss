@@ -14,7 +14,7 @@
 }
 //логотип текст хэдора
 .logo {
-  text-decoration: uppercase;
+  text-transform: uppercase;
   color: #464d62;
   font-family: "Open Sans - Extrabold";
   font-size: 36px;
@@ -24,8 +24,8 @@
 }
 //блок обертка нафигации 
 .header-menu {
-  padding-left: 130px;
-  padding-right: 50px;
+  margin-left: 90px;
+  margin-right: 90px;
   display: flex;
   @include desktop {
   }
@@ -33,11 +33,14 @@
     display: none;
   }
 }
+
+
 //----навигация список УЛ
 .nav-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 //эелементы навигации
 .nav-item {
